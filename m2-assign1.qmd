@@ -1,7 +1,6 @@
 ---
 title: "Assignment: 01 Understanding Data Structures and Functions"
 format: html
-embed-resources: true
 ---
 
 ```{r}
