@@ -1,0 +1,40 @@
+---
+title: "Module 3 Assignment 2"
+format: 
+    html:
+        embed-resources: true
+---
+
+## Assignment: 02 Inheritance and Advanced OOP Features
+
+
+## Question
+
+Create a base class `Animal` and a derived class `Dog` that inherits from `Animal`.
+
+Output: 
+
+```{python}
+#| echo: true
+#| eval: false
+Animals make different sounds. # From Animal class
+Dog barks! # From Dog Class
+```
+
+## Answer:
+
+
+```{python}
+#| echo: true
+class Animal:
+    def make_sound(self):
+        return "Animals make different sounds."
+class Dog(Animal):
+    def make_dog_sound(self):
+        return "Dog barks!"
+
+d = Dog()
+print(d.make_sound())
+print(d.make_dog_sound())
+```
+

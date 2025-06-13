@@ -1,0 +1,9 @@
+format: 
+    html:
+        embed-resources: true
+        
+execute:
+    echo: true
+    warning: false
+    error: false
+    message: false

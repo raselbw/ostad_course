@@ -1,0 +1,50 @@
+---
+title: "Module 4 Assignment 1"
+---
+
+Table name: `google_salaries`
+
+| id | first_name | last_name | department | education | salary |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| 376 | Gary | Stokes | Accounting | Master | 56760 |
+| 377 | Lorenzo | Cortez | Accounting | Doctorate | 74127 |
+| 378 | Roberta | Mcgee | Administration | Primary | 23987 |
+| 379 | Myrtle | Munoz | Administration | Primary | 31079 |
+| 380 | Molly | Walker | Administration | Primary | 20725 |
+| ... | ... | ... | ... | ... | ... | ... |
+
+
+
+**Ques 1:** Select all the columns where employees are getting salary more than 50000
+
+**Ans:**
+
+```sql
+SELECT * FROM google_salaries WHERE salary > 50000;
+```
+
+
+**Ques 2:** Select first name, department and education where employees first name are started with 'Ma'
+
+**Ans:**
+
+```sql
+SELECT first_name, department, education WHERE first_name LIKE 'Ma%';
+```
+
+**Ques 3:** Select unique department.
+
+**Ans:**
+
+```sql
+SELECT DISTINCT department FROM google_salaries;
+```
+
+
+**Ques 4:** Make a group by `education` and present the total salary for every group
+
+**Ans:**
+
+```sql
+SELECT education, SUM(salary) AS total_salary FROM google_salaries GROUP BY education;
+```

@@ -1,0 +1,41 @@
+---
+title: "Module 4 Assignment 2"
+---
+
+### Table 1: `google_salaries`
+
+```{r}
+#| echo: false
+library(readr)
+google_salaries <- read_delim("google_salaries.csv", 
+    delim = "\t", escape_double = FALSE, 
+    trim_ws = TRUE)
+kableExtra::kable(google_salaries)
+```
+
+
+
+
+### Table 2: `google_laptop`
+
+```{r}
+#| echo: false
+library(readr)
+google_laptop <- read_delim("google_laptop.csv", 
+    delim = "\t", escape_double = FALSE, 
+    trim_ws = TRUE)
+kableExtra::kable(google_laptop)
+```
+
+
+
+**Ques:** Write the join query for which employee is assigned for which laptop 
+
+**Ans:**
+
+```sql
+SELECT gl.LaptopId, gs.Empid, gl.Brand, gl.Price, gs.first_name, gs.last_name
+FROM google_salaries AS gs
+JOIN google_laptop AS gl 
+    ON gs.Empid = gl.Empid;
+```

@@ -1,0 +1,76 @@
+---
+title: "Module 1 Assignment 1 (Loops Strings and Smart Operations)"
+format: html
+---
+
+```{r}
+#| include: false
+#| lable: system
+library(reticulate)
+```
+
+
+## Problem: 01 
+
+**Question:** Write a Python program that takes a number as input and checks whether it is even or odd.
+
+**Answer:**
+
+```{python}
+#| echo: true
+#| eval: false
+num = input("Enter an integer number:")
+num = int(num)
+if num % 2 == 0:
+    print("The number", num, "is even")
+else:
+    print("The number", num, "is odd")
+```
+
+
+## Problem: 02
+
+**Question:** Write a program that takes two numbers and an operator (+, -, *, /) and performs the calculation.
+
+**Answer:**
+
+```{python}
+#| echo: true
+#| eval: false
+x = input("Enter a number:")
+y = input("Enter another number:")
+opera = input("Enter any of the four oprators (+, - *, /):")
+x = float(x)
+y = float(y)
+
+if opera == "+":
+    result = x + y
+elif opera == "-":
+    result = x - y
+elif opera == "*":
+    result = x * y
+elif opera == "/":
+    result = x / y
+else:
+    result = "Unknown operator"
+
+print("{} {} {} is {}".format(x, opera, y, result))
+```
+
+
+## Problem: 03
+
+**Question:** Write a program using a for loop that calculates the sum of even numbers between 1 and 100.
+
+**Answer:**
+
+```{python}
+#| echo: true
+#| eval: false
+sum=0
+for i in range(1, 101):
+    if i % 2 == 0:
+        sum+=i
+print("The sum of even numbers between 1 and 100 is", sum)
+```
+
